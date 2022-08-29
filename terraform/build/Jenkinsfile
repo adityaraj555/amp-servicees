@@ -5,10 +5,10 @@ import org.eagleview.TerraformChoices
 def deploymentTargetChoices = TerraformChoices.getdeploymentTargetChoices()
 def fullTestDeploymentManualVerificationTimeChoices = TerraformChoices.getfullTestDeploymentManualVerificationTimeChoices()
 def deploymentTargetBranchMapOverrides = [
-    sandbox: "develop",
+    sandbox: "CL-91",
     test:"develop",
     stage: "develop",
-    develop: "develop",
+    develop: "CL-91",
     prod: "develop"
 ]
 
