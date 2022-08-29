@@ -3,24 +3,7 @@ resource "aws_iam_role" "sim2pdw" {
 ${module.config.environment_config_map.trust_relashionships_external_service}
   POLICY
 
-  inline_policy {
-    name   = "platform-data-orchestrator-resources-access-policy"
-    policy = <<POLICY
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Principal": {
-                "Service": "lambda.amazonaws.com"
-            },
-            "Action": "sts:AssumeRole"
-        }
-    ]
-}
-    POLICY
-    
-  }
+
 
   managed_policy_arns = []
 
@@ -39,24 +22,7 @@ resource "aws_iam_role" "querypdw" {
 ${module.config.environment_config_map.trust_relashionships_external_service}
   POLICY
 
-  inline_policy {
-    name   = "platform-data-orchestrator-resources-access-policy"
-    policy = <<POLICY
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Principal": {
-                "Service": "lambda.amazonaws.com"
-            },
-            "Action": "sts:AssumeRole"
-        }
-    ]
-}
-    POLICY
-    
-  }
+
 
   managed_policy_arns = []
 
@@ -75,24 +41,6 @@ resource "aws_iam_role" "kafkapublisher" {
 ${module.config.environment_config_map.trust_relashionships_external_service}
   POLICY
 
-  inline_policy {
-    name   = "platform-data-orchestrator-resources-access-policy"
-    policy = <<POLICY
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Principal": {
-                "Service": "lambda.amazonaws.com"
-            },
-            "Action": "sts:AssumeRole"
-        }
-    ]
-}
-    POLICY
-    
-  }
 
   managed_policy_arns = []
 
