@@ -1,4 +1,7 @@
 resource "aws_iam_role" "sim2pdw" {
+  assume_role_policy = <<POLICY
+${module.config.environment_config_map.trust_relashionships_external_service}
+  POLICY
 
   inline_policy {
     name   = "platform-data-orchestrator-resources-access-policy"
@@ -32,6 +35,9 @@ resource "aws_iam_role" "sim2pdw" {
 }
 
 resource "aws_iam_role" "querypdw" {
+  assume_role_policy = <<POLICY
+${module.config.environment_config_map.trust_relashionships_external_service}
+  POLICY
 
   inline_policy {
     name   = "platform-data-orchestrator-resources-access-policy"
@@ -65,6 +71,9 @@ resource "aws_iam_role" "querypdw" {
 }
 
 resource "aws_iam_role" "kafkapublisher" {
+  assume_role_policy = <<POLICY
+${module.config.environment_config_map.trust_relashionships_external_service}
+  POLICY
 
   inline_policy {
     name   = "platform-data-orchestrator-resources-access-policy"
