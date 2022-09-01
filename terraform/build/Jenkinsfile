@@ -6,10 +6,10 @@ def deploymentTargetChoices = TerraformChoices.getdeploymentTargetChoices()
 def fullTestDeploymentManualVerificationTimeChoices = TerraformChoices.getfullTestDeploymentManualVerificationTimeChoices()
 def deploymentTargetBranchMapOverrides = [
     sandbox: "CL-91",
-    test:"develop",
-    stage: "develop",
+    test:"CL-91",
+    stage: "CL-91",
     develop: "CL-91",
-    prod: "develop"
+    prod: "CL-91"
 ]
 
 String deploymentStack = "terraform/amp"
