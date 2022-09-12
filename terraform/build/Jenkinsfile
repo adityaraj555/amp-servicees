@@ -8,7 +8,7 @@ def deploymentTargetBranchMapOverrides = [
     sandbox: "CL-94",
     test:"develop",
     stage: "develop",
-    develop: "develop",
+    develop: "CL-94",
     prod: "develop"
 ]
 
