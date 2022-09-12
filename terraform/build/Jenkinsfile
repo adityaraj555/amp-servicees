@@ -5,11 +5,11 @@ import org.eagleview.TerraformChoices
 def deploymentTargetChoices = TerraformChoices.getdeploymentTargetChoices()
 def fullTestDeploymentManualVerificationTimeChoices = TerraformChoices.getfullTestDeploymentManualVerificationTimeChoices()
 def deploymentTargetBranchMapOverrides = [
-    sandbox: "CL-91",
-    test:"CL-91",
-    stage: "CL-91",
-    develop: "CL-91",
-    prod: "CL-91"
+    sandbox: "CL-94",
+    test:"develop",
+    stage: "develop",
+    develop: "develop",
+    prod: "develop"
 ]
 
 String deploymentStack = "terraform/amp"
