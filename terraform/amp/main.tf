@@ -3,7 +3,7 @@ module "config" {
   source = "git::https://github.eagleview.com/engineering/amp-config.git//${platform_choice}${test_config_branch}"
 }
 
-module "" {
+module "batch" {
   source = "git::https://github.eagleview.com/infrastructure/terraform-cloudops-module-aws-batch.git//batch/?ref=0.0.1"
 
   for_each = module.config.batch_configmap
@@ -16,6 +16,7 @@ module "" {
   compute_environment_name = each.value.compute_environment_name
   instance_type         = each.value.instance_type
 }
+
 data "aws_caller_identity" "current" {}
 
 // Useful to troubleshoot role issues
